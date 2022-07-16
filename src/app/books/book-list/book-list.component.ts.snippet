@@ -1,0 +1,12 @@
+// ...
+
+@Component({ /* ... */})
+export class BookListComponent {
+  books: Book[] = [];
+
+  constructor(private service: BookStoreService) {
+    /*BS*/this.service.getAll().subscribe(books => {
+      this.books = books;
+    });/*BE*/
+  }
+}

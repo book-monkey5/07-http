@@ -1,0 +1,6 @@
+remove(isbn: string): Observable<string> {
+  return this.http.delete(
+    `${this.apiUrl}/books/${isbn}`,
+    { responseType: 'text' }
+  );
+}

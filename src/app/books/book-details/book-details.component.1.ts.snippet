@@ -1,0 +1,12 @@
+// ...
+
+@Component({ /* ... */ })
+export class BookDetailsComponent {
+  book?: Book;
+  constructor(/* ... */) {
+    const isbn = this.route.snapshot.paramMap.get('isbn')!;
+    /*BS*/this.service.getSingle(isbn).subscribe(book => {
+      this.book = book;
+    });/*BE*/
+  }
+}

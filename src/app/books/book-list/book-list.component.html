@@ -1,0 +1,8 @@
+<ul class="book-list">
+  <li *ngFor="let b of books">
+    <bm-book-list-item [book]="b" [routerLink]="b.isbn"></bm-book-list-item>
+  </li>
+  <li *ngIf="!books.length">
+    No books available.
+  </li>
+</ul>
