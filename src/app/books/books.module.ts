@@ -15,10 +15,6 @@ import { BookDetailsComponent } from './book-details/book-details.component';
   imports: [
     CommonModule,
     BooksRoutingModule
-  ],
-  exports: [
-    BookListComponent,
-    BookDetailsComponent
   ]
 })
 export class BooksModule { }
