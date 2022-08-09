@@ -23,7 +23,7 @@
     [src]="book.thumbnailUrl"
     alt="Cover">
   <a class="button arrow-left" routerLink="..">Back to list</a>
-  <button class="red" (click)="removeBook()">
+  <button class="red" (click)="removeBook(book.isbn)">
     Remove book
   </button>
 </div>

@@ -22,9 +22,9 @@ export class BookDetailsComponent {
     });
   }
 
-  removeBook() {
-    if (this.book && window.confirm('Remove book?')) {
-      this.service.remove(this.book.isbn).subscribe(() => {
+  removeBook(isbn: string) {
+    if (window.confirm('Remove book?')) {
+      this.service.remove(isbn).subscribe(() => {
         this.router.navigateByUrl('/books');
       });
     }
