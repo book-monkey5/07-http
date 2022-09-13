@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BooksModule } from './books/books.module';
 import { HomeComponent } from './home/home.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
