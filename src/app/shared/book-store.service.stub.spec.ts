@@ -11,16 +11,8 @@ describe('BookStoreService', () => {
   beforeEach(() => {
 
     const expectedBooks: Book[] = [
-      {
-        isbn: '111',
-        title: 'Book 1',
-        authors: []
-      },
-      {
-        isbn: '222',
-        title: 'Book 2',
-        authors: []
-      }
+      { isbn: '111', title: 'Book 1', authors: [] },
+      { isbn: '222', title: 'Book 2', authors: [] }
     ];
 
     const httpStub = {

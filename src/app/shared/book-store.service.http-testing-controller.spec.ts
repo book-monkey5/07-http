@@ -9,20 +9,11 @@ describe('BookStoreService', () => {
   let service: BookStoreService;
   let httpMock: HttpTestingController;
   const expectedBooks = [
-    {
-      isbn: '111',
-      title: 'Book 1',
-      authors: []
-    },
-    {
-      isbn: '222',
-      title: 'Book 2',
-      authors: []
-    }
+    { isbn: '111', title: 'Book 1', authors: [] },
+    { isbn: '222', title: 'Book 2', authors: [] }
   ];
 
   beforeEach(() => {
-
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [BookStoreService]
