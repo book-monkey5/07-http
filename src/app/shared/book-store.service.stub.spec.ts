@@ -21,11 +21,7 @@ describe('BookStoreService', () => {
 
     TestBed.configureTestingModule({
       providers: [
-        {
-          provide: HttpClient,
-          useValue: httpStub
-        },
-        BookStoreService
+        { provide: HttpClient, useValue: httpStub }
       ]
     });
     service = TestBed.inject(BookStoreService);
