@@ -35,7 +35,7 @@ describe('BookStoreService', () => {
     // flush -- jetzt werden die Bücher emittiert
     req.flush(expectedBooks); 
 
-    expect(receivedBooks.length).toBe(2);
+    expect(receivedBooks).toHaveSize(2);
     expect(receivedBooks[0].isbn).toBe('111');
     expect(receivedBooks[1].isbn).toBe('222');
   });
