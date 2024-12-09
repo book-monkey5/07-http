@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,10 +15,11 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BooksModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
